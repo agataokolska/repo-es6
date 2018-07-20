@@ -6,7 +6,7 @@ export class Square{
 
         this.makeSquare()
         this.attachSquare()
-        this.whenClicked()
+        this.attachClickListener()
     }
 
     makeSquare(){
@@ -22,10 +22,12 @@ export class Square{
         // this.square.style.backgroundColor = this.color
     }
 
-    whenClicked(){
-        // this.square.addEventListener('click', function(){alert('Kliknałeś w ' + this.color +  'przycisk')}) w przypadku zwyklej funkcji gubimy this dlatego nalezy użyć funkcji strzałkowej któtrej kontekst wywołania jest w 
-        this.square.addEventListener('click', ()=> {alert('Kliknałeś w ' + this.color +  ' przycisk')})
+    attachClickListener(){
+        // this.square.addEventListener('click', function(){alert('Kliknałeś w ' + this.color +  'przycisk')}) w przypadku zwyklej funkcji gubimy this dlatego nalezy użyć funkcji strzałkowej któtrej kontekst wywołania jest w miejscu zadeklarowania
+        this.square.addEventListener('click', this.whenClicked)
     }
+
+    whenClicked = () => {alert('Kliknałeś w ' + this.color +  ' przycisk')}
 
     attachSquare(){
         this.container.appendChild(this.square)
