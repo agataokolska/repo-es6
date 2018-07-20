@@ -7,9 +7,10 @@ import myDefaultObject, { say1, say2, say3 } from './manyExports'
 import ToDo from './ToDo'
 import Car from './Car'
 
-const car1 = new Car
+const car1 = new Car()
 car1.makeSound()
 
+console.log(car1)
 
 new ToDo('#root')
 

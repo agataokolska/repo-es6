@@ -1,10 +1,14 @@
-function Car() {
+class Car {
+    constructor (){
     this.sound = 'wrr'
+
+    }
+    makeSound() {
+        console.log(this.sound)
+    }
 }
 
-Car.prototype.makeSound = function () {
-    console.log(this.sound)
-}
+
 
 
 export default Car
