@@ -1,42 +1,18 @@
-// import { consoleLog as name } from './myFirstModule'
-// import { person } from './mySecondModule'
-// import { hello } from './mySecondModule'
-// import myOwnDefaultExport from './defaultExport'
-// import { sayHello as myHello } from './defaultExport'
-// import myDefaultObject, { say1, say2, say3 } from './manyExports'
-// import ToDo from './ToDo'
-// import Car from './Car'
-// import { Car, Vehicle } from './CarWithInheritance'
-import {Square, RedSquare} from './Square'
+const name = 'Ela'
+const lastname = 'Krawczyk'
+const add = (a,b) => a + b
+const car = {
+    model:'Peugeot',
+    sound:'wrr'
+}
 
-const blackSquare = new Square('#root', 'black')
-const redSquare = new RedSquare('#root')
-const greenSquare = new Square('#root', 'green')
+console.log('Hello \n' + name + ' '+ lastname + '!')
+console.log(`Hello\n` + name + ` ` + lastname)
+console.log(`Hello ${name} ${lastname}!`)
+console.log(`Hello 
+${name} ${lastname}!`)
 
+console.log(`Wynik 2 plus 3 jest równy ${add(2,3)}`)
 
-// const car2 = new Car()
-// console.log(car2)
-// const vehicle1 = new Vehicle('wrr')
-// console.log(vehicle1)
+console.log(`Mój samochód to ${car.model} i wydaje dźwięk ${car.sound}`)
 
-// const car1 = new Car('Peugeot')
-// car1.makeSound()
-
-// console.log(car1)
-
-// new ToDo('#root')
-
-// console.log(myDefaultObject)
-
-// say1()
-// say2()
-// say3()
-// myDefaultObject.say1()
-
-// myHello()
-
-// myOwnDefaultExport()
-
-// name()
-// console.log(person)
-// console.log(hello())
