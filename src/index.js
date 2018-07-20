@@ -1,18 +1,45 @@
-const name = 'Ela'
-const lastname = 'Krawczyk'
-const add = (a,b) => a + b
-const car = {
-    model:'Peugeot',
-    sound:'wrr'
+const me = {
+    name: 'Ala',
+    lastname: 'Kowalska',
+    car: 'Peugeot',
+    age: '22',
+    city: 'Lublin'
+}
+// const name = me.name
+// const lastname = me.lastname
+
+const {
+    name,
+    lastname
+} = me
+
+const names = ['ala', 'ela', 'zosia']
+// const name0 = names[0]
+// const name2 = names[2]
+
+const [
+    name0,
+    ,
+    name2
+] = names
+
+const meNested = {
+    name: {
+        firstname: 'Ala',
+        surname: 'Kowalska'
+    },
+    car: 'Peugeot',
+    age: '22',
+    city: 'Lublin'
 }
 
-console.log('Hello \n' + name + ' '+ lastname + '!')
-console.log(`Hello\n` + name + ` ` + lastname)
-console.log(`Hello ${name} ${lastname}!`)
-console.log(`Hello 
-${name} ${lastname}!`)
+const firstname1 = meNested.name.firstname
+const lastname1 = meNested.name.surname
 
-console.log(`Wynik 2 plus 3 jest równy ${add(2,3)}`)
-
-console.log(`Mój samochód to ${car.model} i wydaje dźwięk ${car.sound}`)
+const {
+    name: {
+        firstname,
+        surname
+    }
+} = meNested
 
