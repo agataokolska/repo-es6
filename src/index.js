@@ -1,45 +1,27 @@
-const me = {
-    name: 'Ala',
-    lastname: 'Kowalska',
-    car: 'Peugeot',
-    age: '22',
-    city: 'Lublin'
-}
-// const name = me.name
-// const lastname = me.lastname
+const promiseFromFetch = fetch('https://isa-live-chat.firebaseio.com/messages.json')  //zwraca object resonse, promise
 
-const {
-    name,
-    lastname
-} = me
+const promiseFromThen = promiseFromFetch.then(() => { })  //zwraca promise
 
-const names = ['ala', 'ela', 'zosia']
-// const name0 = names[0]
-// const name2 = names[2]
 
-const [
-    name0,
-    ,
-    name2
-] = names
+console.log(promiseFromFetch)
 
-const meNested = {
-    name: {
-        firstname: 'Ala',
-        surname: 'Kowalska'
-    },
-    car: 'Peugeot',
-    age: '22',
-    city: 'Lublin'
-}
 
-const firstname1 = meNested.name.firstname
-const lastname1 = meNested.name.surname
+const anotherPromise = promiseFromFetch.then(response => response.json())
+anotherPromise
+    .then(dataInObject => Object.entries(dataInObject))
+//     .then(dataInArray => dataInArray.map(arrWithKeyAndValue => arrWithKeyAndValue[0] + ' | ' + arrWithKeyAndValue[1].text))
 
-const {
-    name: {
-        firstname,
-        surname
-    }
-} = meNested
 
+// .then(
+//     dataInArray => dataInArray
+//         .map(arrWithKeyAndVal => {
+//             const key = arrWithKeyAndVal[0]
+//             const val = arrWithKeyAndVal[1]
+//             return key + ' | ' + val.text
+//         })
+// )
+
+.then(
+    dataInArray =>dataInArray
+        .map(([key,val]) => key + '|' + val.text)
+)
