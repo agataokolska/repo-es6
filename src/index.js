@@ -1,10 +1,14 @@
-import {consoleLog as name} from './myFirstModule'
-import {person} from './mySecondModule'
-import {hello} from './mySecondModule'
+import { consoleLog as name } from './myFirstModule'
+import { person } from './mySecondModule'
+import { hello } from './mySecondModule'
 import myOwnDefaultExport from './defaultExport'
-import {sayHello as myHello} from './defaultExport'
-import myDefaultObject, {say1, say2,say3} from './manyExports'
-import ToDo from './ToDo' 
+import { sayHello as myHello } from './defaultExport'
+import myDefaultObject, { say1, say2, say3 } from './manyExports'
+import ToDo from './ToDo'
+import Car from './Car'
+
+const car1 = new Car
+car1.makeSound()
 
 
 new ToDo('#root')

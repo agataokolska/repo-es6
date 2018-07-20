@@ -1,6 +1,6 @@
-import Task from './Task'
+import Task from './ToDo'
 
- function ToDo(selector) {
+function ToDo(selector) {
     selector = selector || 'body'
 
     this.contatiner = document.querySelector(selector)

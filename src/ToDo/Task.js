@@ -1,5 +1,5 @@
 
- function Task(name) {
+function Task(name) {
     this.name = name
     this.isCompleted = false
 }
