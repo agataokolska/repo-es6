@@ -1,30 +1,41 @@
-import { consoleLog as name } from './myFirstModule'
-import { person } from './mySecondModule'
-import { hello } from './mySecondModule'
-import myOwnDefaultExport from './defaultExport'
-import { sayHello as myHello } from './defaultExport'
-import myDefaultObject, { say1, say2, say3 } from './manyExports'
-import ToDo from './ToDo'
-import Car from './Car'
+// import { consoleLog as name } from './myFirstModule'
+// import { person } from './mySecondModule'
+// import { hello } from './mySecondModule'
+// import myOwnDefaultExport from './defaultExport'
+// import { sayHello as myHello } from './defaultExport'
+// import myDefaultObject, { say1, say2, say3 } from './manyExports'
+// import ToDo from './ToDo'
+// import Car from './Car'
+// import { Car, Vehicle } from './CarWithInheritance'
+import {Square, RedSquare} from './Square'
 
-const car1 = new Car()
-car1.makeSound()
+const blackSquare = new Square('#root', 'black')
+const redSquare = new RedSquare('#root')
 
-console.log(car1)
 
-new ToDo('#root')
+// const car2 = new Car()
+// console.log(car2)
+// const vehicle1 = new Vehicle('wrr')
+// console.log(vehicle1)
 
-console.log(myDefaultObject)
+// const car1 = new Car('Peugeot')
+// car1.makeSound()
 
-say1()
-say2()
-say3()
-myDefaultObject.say1()
+// console.log(car1)
 
-myHello()
+// new ToDo('#root')
 
-myOwnDefaultExport()
+// console.log(myDefaultObject)
 
-name()
-console.log(person)
-console.log(hello())
+// say1()
+// say2()
+// say3()
+// myDefaultObject.say1()
+
+// myHello()
+
+// myOwnDefaultExport()
+
+// name()
+// console.log(person)
+// console.log(hello())
