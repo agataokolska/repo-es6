@@ -10,7 +10,7 @@
 import {Square, RedSquare} from './Square'
 
 const blackSquare = new Square('#root', 'black')
-const redSquare = new RedSquare('#root', 'red')
+const redSquare = new RedSquare('#root')
 const greenSquare = new Square('#root', 'green')
 
 
