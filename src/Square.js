@@ -15,6 +15,12 @@ export class Square{
         square.style.height = '100px'
         square.style.backgroundColor = this.color
         this.square = square
+
+        // this.square = document.createElement('div')
+        // this.square.style.width = '100px'
+        // this.square.style.height = '100px'
+        // this.square.style.backgroundColor = this.color
+        
     }
 
     attachSquare(){
@@ -23,9 +29,8 @@ export class Square{
 }
 
 export class RedSquare extends Square {
-    constructor(selector,color){
-        super(selector)
-        this.square.style.backgroundColor = 'red'
+    constructor(selector,){
+        super(selector,'red')
         this.whenClicked()
     }
 
